@@ -6,7 +6,7 @@ export function PageBackground() {
     >
       <div className="absolute inset-0 bg-[#050508]" />
       <div
-        className="absolute inset-0"
+        className="ambient-glow absolute inset-0"
         style={{
           background:
             "radial-gradient(ellipse 100% 55% at 50% -5%, rgba(148, 156, 170, 0.09), transparent 52%)",

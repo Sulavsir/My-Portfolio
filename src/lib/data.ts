@@ -3,10 +3,10 @@ export const site = {
   title: "Full Stack Engineer",
   tagline:
     "Building scalable real-time systems and production-grade applications.",
+  collaboration:
+    "Open to collaborate — product work, remote work specific(Nepal), and part-time work.",
   email: "sulav2236@gmail.com",
-  /** Display (Nepal mobile). */
   phone: "9863978564",
-  /** E.164 for tel:/WhatsApp. */
   phoneE164: "+9779863978564",
   address: "Lokanthali-01, Bhaktapur",
   github: "https://github.com/Sulavsir",
@@ -14,6 +14,8 @@ export const site = {
   instagram: "https://www.instagram.com/im_sulav/",
   facebook: "https://www.facebook.com/karky.sulav",
   whatsappHref: "https://wa.me/9779863978564",
+  /** Public PDF in `/public` — opens in a new tab. */
+  cvPdfPath: "/SulavCV__2026.pdf",
 } as const;
 
 export const about = {
@@ -162,22 +164,39 @@ export const projects: Project[] = [
   },
 ];
 
-export const skillCategories = [
+export type SkillCategory = {
+  name: string;
+  skills: readonly string[];
+  /** Visual bar fill (0–100); relative comfort, not a mastery score. */
+  proficiency: number;
+};
+
+export const skillCategories: readonly SkillCategory[] = [
   {
     name: "Backend",
     skills: ["Node.js", "Express", "REST", "WebSockets", "Prisma", "Auth"],
+    proficiency: 58,
   },
   {
     name: "Frontend",
     skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    proficiency: 55,
   },
   {
     name: "Database",
-    skills: ["PostgreSQL", "MongoDB", "Schema design", "Indexing"],
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Schema design",
+      "Indexing",
+    ],
+    proficiency: 54,
   },
   {
     name: "DevOps",
-    skills: ["Docker", "CI/CD", "Vercel", "Observability", "Linux"],
+    skills: ["Docker", "nginx", "AWS S3", "AWS RDS", "CI/CD", "Linux"],
+    proficiency: 48,
   },
 ] as const;
 

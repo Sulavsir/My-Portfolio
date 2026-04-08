@@ -43,11 +43,15 @@ export function SkillsSection() {
                     </motion.span>
                   ))}
                 </div>
-                <div className="mt-6 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
+                <div
+                  className="mt-6 h-1.5 overflow-hidden rounded-full bg-white/[0.06]"
+                  role="presentation"
+                  aria-hidden
+                >
                   <motion.div
                     className="h-full rounded-full bg-zinc-500/80"
                     initial={{ width: 0 }}
-                    whileInView={{ width: `${72 + (i * 7) % 25}%` }}
+                    whileInView={{ width: `${cat.proficiency}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                   />

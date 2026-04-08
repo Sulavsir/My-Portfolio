@@ -11,6 +11,14 @@ export function SiteFooter() {
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-3">
           <Link
+            href={site.cvPdfPath}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-zinc-300"
+          >
+            CV
+          </Link>
+          <Link
             href={site.github}
             target="_blank"
             rel="noopener noreferrer"

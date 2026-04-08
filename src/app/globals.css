@@ -29,6 +29,24 @@ body {
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes ambient-glow {
+    0%,
+    100% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      opacity: 0.88;
+      transform: translate(1.5%, 0.8%) scale(1.03);
+    }
+  }
+
+  .ambient-glow {
+    animation: ambient-glow 22s ease-in-out infinite;
+  }
+}
+
 ::selection {
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
