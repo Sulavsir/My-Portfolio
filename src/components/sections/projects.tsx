@@ -13,7 +13,7 @@ const featured = projects.find((p) => p.featured)!;
 const rest = projects.filter((p) => !p.featured);
 
 export function ProjectsSection() {
-  const [p1, p2, p3, p4] = rest;
+  const [p1, p2, p3, p4, ...moreRest] = rest;
 
   return (
     <section
@@ -56,6 +56,16 @@ export function ProjectsSection() {
             </Reveal>
           )}
         </div>
+
+        {moreRest.length > 0 && (
+          <div className="mt-5 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            {moreRest.map((p, i) => (
+              <Reveal key={p.slug} delay={0.06 + i * 0.04}>
+                <CompactCard project={p} />
+              </Reveal>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

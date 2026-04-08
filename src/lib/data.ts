@@ -94,17 +94,44 @@ export const projects: Project[] = [
     slug: "chatjyotishi",
     title: "ChatJyotishi",
     description:
-      "Production-grade real-time consultation platform with persistent chat, session reliability, and integrated regional payment rails—optimized for throughput and operational clarity.",
+      "Real-time astrology consultation platform with payments (Getpay, FonePay), sessions, and a full admin surface for day-to-day operations.",
     stack: ["Next.js", "WebSockets", "Prisma", "PostgreSQL", "Payments"],
     impact: [
-      "Reduced perceived latency via streaming-style message delivery and connection recovery.",
-      "Hardened payment paths with structured error handling across Getpay and FonePay.",
-      "Structured data access with Prisma to keep schema changes safe at scale.",
+      "Shipped a full-featured admin panel for the product—astrologers, pricing, content, and operational controls in one place.",
+      "Streaming-style delivery and resilient WebSocket sessions for low-latency chat.",
+      "Structured payment and data layers with Prisma and PostgreSQL for auditable, safe changes.",
     ],
     href: "https://chatjyotishi.com",
-    image:
-      "https://placehold.co/1200x720/0c0c12/818cf8/png?text=ChatJyotishi&font=inter",
+    image: "/chatjyotishi.png",
     featured: true,
+  },
+  {
+    slug: "dipartha",
+    title: "DipArtha",
+    description:
+      "Cloud-based jewelry business management for showrooms: inventory, sales, purchases, karigar and refining workflows, orders, loans, and finance—in one place with mobile apps.",
+    stack: ["Web", "Cloud", "Inventory", "Finance"],
+    impact: [
+      "Centralized day-to-day jewelry operations with real-time visibility across branches.",
+      "Built for the industry: sales, purchases, refining, orders, and loans with transparent tracking.",
+      "Developed by Autonomous Technology—accessible anywhere via cloud and mobile.",
+    ],
+    href: "https://dipartha.com/",
+    image: "/dipartha.png",
+  },
+  {
+    slug: "e-pharma",
+    title: "E-Pharma",
+    description:
+      "Pharmacy management system (Next.js, TypeScript) for staff: inventory, sales, purchases, returns, and reporting—split across user, admin, and superadmin roles.",
+    stack: ["Next.js", "TypeScript", "TanStack Query", "Axios", "REST", "RBAC"],
+    impact: [
+      "Three product areas: user ops (inventory, sales, purchases, returns, reports), admin (companies, branches, users, roles), superadmin (versions, menu rollout, limits).",
+      "Secure auth and role-based dashboards (user, admin, superadmin).",
+      "REST APIs with Axios and TanStack Query; validated forms and data tables for reliable transactions.",
+    ],
+    href: "https://pharmacy.autonomoustechnology.net/home",
+    image: "/e-pharma.png",
   },
   {
     slug: "patriot-pulse",
@@ -117,22 +144,21 @@ export const projects: Project[] = [
       "Optimized dashboard queries to keep heavy views responsive under load.",
     ],
     href: "https://patriotpulse.com",
-    image:
-      "https://placehold.co/800x500/0c0c12/a78bfa/png?text=Patriot+Pulse&font=inter",
+    image: "/patriot-pulse.png",
   },
   {
-    slug: "ecommerce",
-    title: "E-commerce Platform",
+    slug: "e-bidding",
+    title: "E-bidding (backend)",
     description:
-      "End-to-end commerce stack with catalog management, checkout, and inventory-aware flows—tuned for reliability during traffic spikes.",
-    stack: ["MERN", "REST", "Payments", "Caching"],
+      "Auction-style bidding API with time-bounded rounds and integrity-focused updates—concurrency-aware rules and validation for consistent outcomes.",
+    stack: ["Node.js", "Express", "REST", "MongoDB"],
     impact: [
-      "Architected cart and checkout flows with idempotent operations where it mattered most.",
-      "Improved resilience by isolating hot paths and reducing duplicate work server-side.",
+      "Express backend with structured routes, middleware, and validation for bidding flows.",
+      "Repository and model layer for listings, bids, and time-bounded rounds.",
     ],
-    href: "https://example.com/ecommerce",
+    href: "https://github.com/Sulavsir/ebidding-backend",
     image:
-      "https://placehold.co/800x500/0c0c12/34d399/png?text=E-commerce&font=inter",
+      "https://placehold.co/1200x720/0c0c12/52525b/png?text=E-bidding&font=inter",
   },
   {
     slug: "cv-builder",
@@ -144,23 +170,8 @@ export const projects: Project[] = [
       "Designed a predictable editing model to avoid layout thrash on large documents.",
       "Optimized render paths for snappy preview updates on modest hardware.",
     ],
-    href: "https://example.com/cv-builder",
-    image:
-      "https://placehold.co/800x500/0c0c12/fbbf24/png?text=CV+Builder&font=inter",
-  },
-  {
-    slug: "e-bidding",
-    title: "E-bidding Platform",
-    description:
-      "Auction-style bidding with time-bounded rounds and integrity-focused updates—built to minimize race conditions and user confusion.",
-    stack: ["Real-time", "Node.js", "Security", "PostgreSQL"],
-    impact: [
-      "Implemented concurrency-aware bidding rules to keep outcomes consistent.",
-      "Tightened validation and audit trails for high-stakes transactions.",
-    ],
-    href: "https://example.com/e-bidding",
-    image:
-      "https://placehold.co/800x500/0c0c12/f472b6/png?text=E-bidding&font=inter",
+    href: "https://a-simple-cv-builder.vercel.app/",
+    image: "/cv-builder.png",
   },
 ];
 
@@ -175,28 +186,22 @@ export const skillCategories: readonly SkillCategory[] = [
   {
     name: "Backend",
     skills: ["Node.js", "Express", "REST", "WebSockets", "Prisma", "Auth"],
-    proficiency: 58,
+    proficiency: 83,
   },
   {
     name: "Frontend",
     skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    proficiency: 55,
+    proficiency: 82,
   },
   {
     name: "Database",
-    skills: [
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB",
-      "Schema design",
-      "Indexing",
-    ],
-    proficiency: 54,
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Schema design", "Indexing"],
+    proficiency: 81,
   },
   {
     name: "DevOps",
     skills: ["Docker", "nginx", "AWS S3", "AWS RDS", "CI/CD", "Linux"],
-    proficiency: 48,
+    proficiency: 54,
   },
 ] as const;
 
