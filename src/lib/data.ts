@@ -178,7 +178,6 @@ export const projects: Project[] = [
 export type SkillCategory = {
   name: string;
   skills: readonly string[];
-  /** Visual bar fill (0–100); relative comfort, not a mastery score. */
   proficiency: number;
 };
 
@@ -207,23 +206,29 @@ export const skillCategories: readonly SkillCategory[] = [
 
 export const education = [
   {
-    school: "Your University / Program",
-    degree: "Bachelor of Science in Computer Science (or equivalent)",
-    period: "20XX – 20XX",
+    school: "Tribhuvan University",
+    degree:
+      "Bachelor of Science in Computer Science and Information Technology",
+    period: "2021 – 2025",
     detail:
-      "Coursework and projects emphasizing systems, algorithms, and software engineering practice.",
+      "Completed my Bachelor's degree in Computer Science and Information Technology from Tribhuvan University.",
   },
 ];
 
 export const certifications = [
   {
-    name: "AWS / Cloud Foundations (placeholder)",
-    issuer: "Placeholder Issuer",
-    year: "20XX",
+    name: "Full stack development Course",
+    issuer: "Broadway Infosys",
+    year: "2023",
   },
   {
-    name: "Backend & API Design (placeholder)",
-    issuer: "Placeholder Issuer",
-    year: "20XX",
+    name: "Next JS Course",
+    issuer: "Jobsniper",
+    year: "2023",
+  },
+  {
+    name: "Techtrix Hackathon",
+    issuer: "New Summit College",
+    year: "2024",
   },
 ];
